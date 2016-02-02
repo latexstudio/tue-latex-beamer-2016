@@ -1,0 +1,190 @@
+\mode<presentation>
+
+% Requirement
+\RequirePackage{tikz}
+
+% Settings
+
+%\usecolortheme{tue2016}
+%\useinnertheme{tue2016}
+%\useoutertheme{tue2016}
+
+% Settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%								Colors           								%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+\setbeamercolor*{title page header}{fg=white}
+\setbeamercolor*{author}{fg=white}
+\setbeamercolor*{date}{fg=white}
+%\setbeamercolor{alerted text}{fg=orange}\textsl{•}
+%\setbeamercolor{background canvas}{bg=white}
+%\setbeamercolor{block body alerted}{bg=normal text.bg!90!black}
+%\setbeamercolor{block body}{bg=normal text.bg!90!black}
+%\setbeamercolor{block body example}{bg=normal text.bg!90!black}
+%\setbeamercolor{block title alerted}{use={normal text,alerted text},fg=alerted text.fg!75!normal text.fg,bg=normal text.bg!75!black}
+%\setbeamercolor{block title}{bg=blue}
+%\setbeamercolor{block title example}{use={normal text,example text},fg=example text.fg!75!normal text.fg,bg=normal text.bg!75!black}
+%\setbeamercolor{fine separation line}{}
+%\setbeamercolor{frametitle}{fg=brown}
+%\setbeamercolor{item projected}{fg=black}
+%\setbeamercolor{normal text}{bg=black,fg=yellow}
+%\setbeamercolor{palette sidebar primary}{use=normal text,fg=normal text.fg}
+%\setbeamercolor{palette sidebar quaternary}{use=structure,fg=structure.fg}
+%\setbeamercolor{palette sidebar secondary}{use=structure,fg=structure.fg}
+%\setbeamercolor{palette sidebar tertiary}{use=normal text,fg=normal text.fg}
+%\setbeamercolor{section in sidebar}{fg=brown}
+%\setbeamercolor{section in sidebar shaded}{fg=grey}
+%\setbeamercolor{separation line}{}
+%\setbeamercolor{sidebar}{bg=red}
+%\setbeamercolor{sidebar}{parent=palette primary}
+%\setbeamercolor{structure}{bg=black, fg=green}
+%\setbeamercolor{subsection in sidebar}{fg=brown}
+%\setbeamercolor{subsection in sidebar shaded}{fg=grey}
+%\setbeamercolor{title}{fg=brown}
+%\setbeamercolor{titlelike}{fg=brown}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%								Inner Theme        								%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+%    rectangles
+%    circles
+%    inmargin
+%    rounded
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%								Outher Theme       								%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+
+%    infolines
+%    miniframes
+%    shadow
+%    sidebar
+%    smoothbars
+%    smoothtree
+%    split
+%    tree
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%								Frame Layouts      								%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\makeatletter
+%
+% Title 01
+% 
+\define@key{beamerframe}{title-01}[true]{%
+  \setbeamertemplate{background}{%
+	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-title-01}
+  }%
+  \setbeamertemplate{itemize item}[square]%
+}
+
+%
+% Title 02
+%
+\define@key{beamerframe}{title-02}[true]{%
+  \setbeamertemplate{background}{%
+	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-title-02}
+  }%
+  \setbeamertemplate{itemize item}[square]%
+}
+
+%
+% Title 03
+%
+\define@key{beamerframe}{title-03}[true]{%
+  \setbeamertemplate{background}{%
+	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-title-03}
+  }%
+  \setbeamertemplate{itemize item}[square]%
+}
+
+%
+% Content A1
+%
+\define@key{beamerframe}{content-a1}[true]{%
+  \setbeamertemplate{background}{%
+	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-content-a1}
+  }%
+  \setbeamertemplate{itemize item}[square]%
+}
+%
+% Content A2
+%
+\define@key{beamerframe}{content-a2}[true]{%
+  \setbeamertemplate{background}{%
+	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-content-a2}
+  }%
+  \setbeamertemplate{itemize item}[square]%
+}
+%
+% Content B1
+%
+\define@key{beamerframe}{content-b1}[true]{%
+  \setbeamertemplate{background}{%
+	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-content-b1}
+  }%
+  \setbeamertemplate{itemize item}[square]%
+}
+%
+% Content B2
+%
+\define@key{beamerframe}{content-b2}[true]{%
+  \setbeamertemplate{background}{%
+	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-content-b2}
+  }%
+  \setbeamertemplate{itemize item}[square]%
+}
+%
+% Content B3
+%
+\define@key{beamerframe}{content-b3}[true]{%
+  \setbeamertemplate{background}{%
+	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-content-b3}
+  }%
+  \setbeamertemplate{itemize item}[square]%
+}
+%
+% Content C1
+%
+\define@key{beamerframe}{content-c1}[true]{%
+  \setbeamertemplate{background}{%
+	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-content-c1}
+  }%
+  \setbeamertemplate{itemize item}[square]%
+}
+%
+% Content C2
+%
+\define@key{beamerframe}{content-c2}[true]{%
+  \setbeamertemplate{background}{%
+	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-content-c2}
+  }%
+  \setbeamertemplate{itemize item}[square]%
+}
+%
+% Content C3
+%
+\define@key{beamerframe}{content-c3}[true]{%
+  \setbeamertemplate{background}{%
+	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-content-c3}
+  }%
+  \setbeamertemplate{itemize item}[square]%
+}
+
+%
+% Content C4
+%
+\define@key{beamerframe}{content-c4}[true]{%
+  \setbeamertemplate{background}{%
+	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-content-c4}
+  }%
+  \setbeamertemplate{itemize item}[square]%
+}
+\makeatother
+
+%\setbeamertemplate{navigation symbols}{}
+%\setbeamertemplate{blocks}[rounded][shadow=true]  
+
+\mode<all>
