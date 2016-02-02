@@ -14,7 +14,9 @@
 %- define bullet points
 %- define content box positions  
 %- add footer (page number, department, speaker, etc)
-%- add outine 
+%- add possibility of outine 
+%- define style / outline of  title / subtitle of page
+%- add tue font
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -37,9 +39,31 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{Presentation Title}
-\date[ISPN ’80]{27th International Symposium of Prime Numbers}
+%\date[ISPN ’80]{27th International Symposium of Prime Numbers}
+\subtitle{A Presentation Subtitle}
 \author[sthaler]{Stefan Thaler \texttt{s.m.thaler@tue.nl}}
-%TODO department
+\date{\today}
+
+%\title[Crisis] % (optional, only for long titles)
+%{The Economics of Financial Crisis}
+%\subtitle{Evidence from India}
+%\author[Author, Anders] % (optional, for multiple authors)
+%{F.~Author\inst{1} \and S.~Anders\inst{2}}
+%\institute[Universities Here and There] % (optional)
+%{
+%  \inst{1}%
+%  Institute of Computer Science\\
+%  University Here
+%  \and
+%  \inst{2}%
+%  Institute of Theoretical Philosophy\\
+%  University There
+%}
+%\date[KPT 2004] % (optional)
+%{Conference on Presentation Techniques, 2004}
+%\subject{Computer Science}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %								Presentation       								%
@@ -48,24 +72,24 @@
 %
 % Titles
 %
-
 \begin{frame}[title-01]
  %\titlepage
 \end{frame}
 
 \begin{frame}[title-02]
- %\titlepage
+ \titlepage
 \end{frame}
 
 \begin{frame}[title-03]
- %\titlepage
+ \titlepage
 \end{frame}
 
 %
 % Content A
 %
 \begin{frame}[content-a1]
- %\titlepage
+ \frametitle{Title}
+ \framesubtitle{subtitle}
 \end{frame}
 
 \begin{frame}[content-a2]

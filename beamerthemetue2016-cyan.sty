@@ -2,12 +2,12 @@
 
 % Requirement
 \RequirePackage{tikz}
+\RequirePackage{environ}
+\RequirePackage[absolute,overlay]{textpos}
 
 % Settings
 
-%\usecolortheme{tue2016}
-%\useinnertheme{tue2016}
-%\useoutertheme{tue2016}
+% https://www.sharelatex.com/learn/Beamer
 
 % Settings
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -66,6 +66,81 @@
 %    smoothtree
 %    split
 %    tree
+%\defbeamertemplate*{title page}{tue2016-cyan}[1][]{% 
+%   \vskip6cm%
+%    \begin{beamercolorbox}[wd=12cm,leftskip=3cm,sep=8pt,#1]{title page header}%
+%      \usebeamerfont{title}\inserttitle\par%
+%    \end{beamercolorbox}%
+    %\vskip0.75cm%
+    %\begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{author}%
+    %  \usebeamerfont{author}\insertauthor%
+    %\end{beamercolorbox}%
+    % \vskip0.2cm%
+    %\begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{date}%
+    %  \usebeamerfont{author}\insertdate%
+    %\end{beamercolorbox}%
+  %\vfill%
+%}%
+
+%\setbeamertemplate{title-01}{
+%\begin{beamercolorbox}[wd=12cm,leftskip=5cm,sep=8pt]{}
+%\usebeamerfont{title}\inserttitle\par
+%\end{beamercolorbox}
+%}
+
+%\defbeamertemplate*{title page}{customized-01}[1][]
+%{
+%  \usebeamerfont{title}\inserttitle\par
+  %\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+  %\bigskip
+  %\usebeamerfont{author}\insertauthor\par
+  %\usebeamerfont{institute}\insertinstitute\par
+  %\usebeamerfont{date}\insertdate\par
+  %\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+%}
+
+%\defbeamertemplate*{title page}{customized-02}[1][]
+%{
+  %\usebeamerfont{title}\inserttitle\par
+%  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+  %\bigskip
+  %\usebeamerfont{author}\insertauthor\par
+  %\usebeamerfont{institute}\insertinstitute\par
+  %\usebeamerfont{date}\insertdate\par
+  %\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+%}
+
+%\defbeamertemplate*{title page}{customized}[1][]
+%{
+%  \usebeamerfont{title}\inserttitle\par
+%  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+%  \bigskip
+%  \usebeamerfont{author}\insertauthor\par
+%  \usebeamerfont{institute}\insertinstitute\par
+%  \usebeamerfont{date}\insertdate\par
+%  \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+%}
+%\title{A customized title page}
+%\subtitle{for demonstration}
+%\author{Stefan Kottwitz}
+%\date{\today}
+%\begin{document}
+%\maketitle
+%\end{document}
+
+% \ifx\insertsubtitle\@empty%
+% \else%
+% \vskip0.25em%
+% {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+% \fi% 
+
+\defbeamertemplate*{title-01-title}{title-01}
+{
+  \parindent 1em\noindent%
+  \raggedright
+  \hbox to 1.8em{\hfil\inserttitle\par}%
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %								Frame Layouts      								%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
@@ -77,7 +152,12 @@
   \setbeamertemplate{background}{%
 	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-title-01}
   }%
-  \setbeamertemplate{itemize item}[square]%
+  %title font
+  \setbeamerfont{title}{size=\huge, family={\fontfamily{phv}}, series=\bfseries}%
+  \setbeamercolor{title}{fg=white}%
+  \begin{textblock}{7.5}(0.40,4.00)
+  \usebeamerfont{title}\color{white}\inserttitle
+  \end{textblock}
 }
 
 %
