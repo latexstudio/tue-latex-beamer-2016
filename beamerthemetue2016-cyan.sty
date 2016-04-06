@@ -1,11 +1,40 @@
 \mode<presentation>
+% The latex conversion of the TU/e 2016 beamer style
+%
+% Authors: Stefan Thaler
+% Date: 2016-February-02
+% Version: 0.0.1
+
+%
+%		TODOs           								
+%
+%- create style for other color themes than cyan
+%- support title pages
+%- define tue colors
+%- define bullet points
+%- define content box positions  
+%- add footer (page number, department, speaker, etc)
+%- add possibility of outine 
+%- define style / outline of  title / subtitle of page
+%- add tue font
+%- support subsections 
+%- support basic elements, give example slides for common used themes
+
+
+%
+%		README           								
+%
+%	The  ratio of powerpoint size to latex paper size is 1:0.504, which explains the odd strange positions of the textbox
+% 
+
 
 % Requirement
 \RequirePackage{tikz}
 \RequirePackage{environ}
 \RequirePackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
 
-% Settings
 
 % https://www.sharelatex.com/learn/Beamer
 
@@ -141,47 +170,97 @@
   \hbox to 1.8em{\hfil\inserttitle\par}%
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%								Frame Layouts      								%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-\makeatletter
 %
-% Title 01
+%		Frame Layouts
+%	
+\makeatletter
+
+
+%
+%		Title 01
 % 
 \define@key{beamerframe}{title-01}[true]{%
   \setbeamertemplate{background}{%
 	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-title-01}
   }%
-  %title font
-  \setbeamerfont{title}{size=\huge, family={\fontfamily{phv}}, series=\bfseries}%
-  \setbeamercolor{title}{fg=white}%
-  \begin{textblock}{7.5}(0.40,4.00)
-  \usebeamerfont{title}\color{white}\inserttitle
+  %set fonts 
+  \setbeamerfont{title}		{size=\huge,  family={\fontfamily{phv}},series=\bfseries}%
+  \setbeamerfont{subtitle}	{size=\large, family={\fontfamily{phv}},series=\bfseries}%
+  \setbeamerfont{author}	{size=\normalsize, family={\fontfamily{phv}},series=\slshape}%
+  %\setbeamerfont{institute}	{size=\large, family={\fontfamily{phv}},series=\bfseries}%
+  \setbeamerfont{date}		{size=\normalsize, family={\fontfamily{phv}},series=\slshape}%
+  %define font colors
+  \setbeamercolor{title}{fg=white}%  
+  %position elements on the page
+  \begin{textblock}{5.12992}(0.38808,2.27304)
+	  \usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle
   \end{textblock}
+  \begin{textblock}{4.51}(0.38808,5.15088)
+  	{\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle}\par
+  	\bigskip
+  	\usebeamerfont{author}\insertauthor\par
+  	%\usebeamerfont{institute}\insertinstitute\par
+  	\usebeamerfont{date}\insertdate\par
+  \end{textblock}  
 }
 
 %
-% Title 02
+%		Title 02
 %
 \define@key{beamerframe}{title-02}[true]{%
   \setbeamertemplate{background}{%
 	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-title-02}
   }%
-  \setbeamertemplate{itemize item}[square]%
+  %set fonts 
+  \setbeamerfont{title}		{size=\huge,  family={\fontfamily{phv}},series=\bfseries}%
+  \setbeamerfont{subtitle}	{size=\large, family={\fontfamily{phv}},series=\bfseries}%
+  \setbeamerfont{author}	{size=\normalsize, family={\fontfamily{phv}},series=\slshape}%
+  %\setbeamerfont{institute}	{size=\large, family={\fontfamily{phv}},series=\bfseries}%
+  \setbeamerfont{date}		{size=\normalsize, family={\fontfamily{phv}},series=\slshape}%
+  %define font colors
+  \setbeamercolor{title}{fg=white}%  
+  %position elements on the page
+  \begin{textblock}{5.12992}(0.38808,2.27304)
+  	\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle
+  \end{textblock}
+  \begin{textblock}{4.51}(0.38808,5.15088)
+  	{\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle}\par
+  	\bigskip
+  	\usebeamerfont{author}\insertauthor\par
+  	%\usebeamerfont{institute}\insertinstitute\par
+  	\usebeamerfont{date}\insertdate\par
+  \end{textblock} 
 }
 
 %
-% Title 03
+%		Title 03
 %
 \define@key{beamerframe}{title-03}[true]{%
   \setbeamertemplate{background}{%
 	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-title-03}
   }%
-  \setbeamertemplate{itemize item}[square]%
+  %set fonts 
+  \setbeamerfont{title}		{size=\huge,  family={\fontfamily{phv}},series=\bfseries}%
+  \setbeamerfont{subtitle}	{size=\large, family={\fontfamily{phv}},series=\bfseries}%
+  \setbeamerfont{author}	{size=\normalsize, family={\fontfamily{phv}},series=\slshape}%
+  %\setbeamerfont{institute}	{size=\large, family={\fontfamily{phv}},series=\bfseries}%
+  \setbeamerfont{date}		{size=\normalsize, family={\fontfamily{phv}},series=\slshape}%
+  %define font colors
+  \setbeamercolor{title}{fg=white}%  
+  %position elements on the page
+  \begin{textblock}{8,22024}(0.38808,1.82792)
+  	\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle
+  \end{textblock}
+  \begin{textblock}{8,22024}(0.38808,3.67416)
+  	{\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle}\par
+  	\usebeamerfont{author}\insertauthor,
+  	%\usebeamerfont{institute}\insertinstitute\par
+  	\usebeamerfont{date}\insertdate\par
+  \end{textblock} 
 }
 
 %
-% Content A1
+%		Content A1
 %
 \define@key{beamerframe}{content-a1}[true]{%
   \setbeamertemplate{background}{%
@@ -190,7 +269,7 @@
   \setbeamertemplate{itemize item}[square]%
 }
 %
-% Content A2
+%		Content A2
 %
 \define@key{beamerframe}{content-a2}[true]{%
   \setbeamertemplate{background}{%
@@ -199,7 +278,7 @@
   \setbeamertemplate{itemize item}[square]%
 }
 %
-% Content B1
+%		Content B1
 %
 \define@key{beamerframe}{content-b1}[true]{%
   \setbeamertemplate{background}{%
@@ -208,7 +287,7 @@
   \setbeamertemplate{itemize item}[square]%
 }
 %
-% Content B2
+%		Content B2
 %
 \define@key{beamerframe}{content-b2}[true]{%
   \setbeamertemplate{background}{%
@@ -217,7 +296,7 @@
   \setbeamertemplate{itemize item}[square]%
 }
 %
-% Content B3
+%		Content B3
 %
 \define@key{beamerframe}{content-b3}[true]{%
   \setbeamertemplate{background}{%
@@ -226,7 +305,7 @@
   \setbeamertemplate{itemize item}[square]%
 }
 %
-% Content C1
+%		Content C1
 %
 \define@key{beamerframe}{content-c1}[true]{%
   \setbeamertemplate{background}{%
@@ -235,7 +314,7 @@
   \setbeamertemplate{itemize item}[square]%
 }
 %
-% Content C2
+%		Content C2
 %
 \define@key{beamerframe}{content-c2}[true]{%
   \setbeamertemplate{background}{%
@@ -244,7 +323,7 @@
   \setbeamertemplate{itemize item}[square]%
 }
 %
-% Content C3
+%		Content C3
 %
 \define@key{beamerframe}{content-c3}[true]{%
   \setbeamertemplate{background}{%
@@ -254,7 +333,7 @@
 }
 
 %
-% Content C4
+%		Content C4
 %
 \define@key{beamerframe}{content-c4}[true]{%
   \setbeamertemplate{background}{%

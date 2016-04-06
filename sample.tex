@@ -1,0 +1,141 @@
+% Sample for the "unofficial" TU/e LaTex beamer template
+%
+% Author: Stefan Thaler
+% Date: 2016-February-02
+
+% License: GPL v3  
+%TODO Add link to explanation of GPL license
+%TODO Get started:
+% Source:  git@github.com:stefanthaler/tue-latex-beamer-2016.git
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%								TODOs           								%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+%- add TU/e logo
+%- add color schemes
+%- add fonts
+%- add page layouts (13 to go)
+% Add samples for formulas
+% Add sampels for images
+% Add samples for tables
+% Add samples for Theorems
+
+%- Full Page background image http://tex.stackexchange.com/questions/78464/background-image-in-beamer-slides 
+%- Beamer Documentation https://en.wikibooks.org/wiki/LaTeX/Presentations
+%- Define custom slides: http://tex.stackexchange.com/questions/173201/beamer-template-with-different-style-options-for-frames
+
+
+
+
+\documentclass{beamer}
+%TODO document whi ebox is needed
+\usepackage{etoolbox}
+
+%TODO define color themes, make them available as variable for frame layouts
+%\usecolortheme{beaver}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%							Frame-Layouts	         							%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\defbeamertemplate{headline}{cyan-title-01}{%
+%  \setbeamertemplate{background}{%
+%  	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-title-01}
+%  }
+  
+%}
+%\defbeamertemplate{headline}{cyan-title-02}{%
+%  \setbeamertemplate{background}{%
+%  	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-title-02}
+%  }
+%}
+
+% Frame Keys
+%\define@key{beamerframe}{cyan-title-01}[true]{%
+%    \setbeamertemplate{headline}[cyan-title-01]
+%}
+%\define@key{beamerframe}{cyan-title-02}[true]{%
+%    \setbeamertemplate{headline}[cyan-title-02]
+%}
+
+
+
+% select style
+%\usetheme{Warsaw}
+
+% custom style 
+%\useoutertheme{infolines}
+% infolines
+% miniframes
+% shadow
+% sidebar
+% smoothbars
+% smoothtree
+% split
+% tree
+
+
+% select colortheme
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%								Cyan Layout										%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Content Area
+% Title
+% Subtitle
+% Department
+
+%Content 01
+\defbeamertemplate{background}{cyan-content-01}{%
+  
+}
+%Title 01
+\defbeamertemplate{background}{cyan-title-01}
+
+% Set Default Frame Template
+\BeforeBeginEnvironment{frame}{%
+  \setbeamertemplate{background}[cyan-content-01]%
+}
+
+\makeatletter
+
+\define@key{beamerframe}{cyan-title-01}[true]{%
+  \setbeamertemplate{background}{%
+	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{backgrounds/cyan-title-01}
+  }%
+  \setbeamertemplate{itemize item}[square]%
+}
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%								Document Start									%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%						
+
+
+
+
+\begin{document}
+
+\section{A Section}
+\subsection{A Subsection}
+\begin{frame}
+
+\begin{itemize}
+	\item Bullet Point
+	\item Good Point
+\end{itemize}
+  
+\end{frame} 
+
+%\begin{frame}[cyan-title-01]
+%  \begin{itemize}
+%	\item Bullet Point
+%	\item Good Point
+%  \end{itemize}
+%\end{frame}
+
+%\begin{frame}
+%  is left again
+%\end{frame}
+
+\end{document}
